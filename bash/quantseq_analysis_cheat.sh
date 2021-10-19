@@ -1,6 +1,9 @@
-
-### Kill all screen sessions
-killall screen # DO NOT SUDO! #
+### Screen management #
+screen -r -d sessioname # reopen attached sessions #
+screen -S sessioname # create session with custom name #
+Ctrl-a [ # go into scrollback mode to see more of a screen's history
+Ctrl-a-d # detach from screen
+killall screen # DO NOT SUDO! # kill all screen sessions (that you have permission to modify)
 
 
 ### In the case of needing to use an older version of Java #
@@ -49,10 +52,6 @@ zcat < someFQ.GZfile | head
 
 ### Read count in fq.gz file #
 zcat file.fq.gz | echo $((`wc -l`/4))
-
-### Screen management #
-screen -r -d sessioname # reopen attached sessions #
-screen -S sessioname # create session with custom name #
 
 ### Rename files large number of files #
 
