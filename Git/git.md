@@ -45,6 +45,8 @@ usethis::git_sitrep()
 
 1. Turn a new or existing directory into an R project with a .Rproj file
 
+     - File > New Project > Existing Directory
+
 Use the R command line while in the correct directory to initialize:
 ```bash
 git init
