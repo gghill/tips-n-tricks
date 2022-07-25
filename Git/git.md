@@ -55,7 +55,7 @@ check for a git repo in chosen directory and restart R Studio. You should now se
 
 2.  Commit! Commit your new files from R Studio, but don't push (yet).
 
-3.  On github make a new repo choosing to create from an existing directory and copy the code it gives you, using the recommended settings for existing directories.
+3.  On github make a new repo choosing to create from an existing directory (do not add a README or a .gitignore template yet) and copy the code it gives you, using the recommended settings for existing directories.
 
 4. Paste the code github gives you into the R command line within your new R project. Should be something like:
 ```bash
