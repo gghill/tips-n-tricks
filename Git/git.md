@@ -224,4 +224,23 @@ And celebrate when you see
   Successfully rebased and updated refs/heads/master.
   ```
 Now you should be able to push from command line or Rstudio with no errors!
+
+#### Force merge with overwrite
+In order to merge and force overwrite all files based on local branch we can use a variation of
+  ```
+  git merge -s
+  ```
+
+Note that the option is -s and not -X. -s denotes the use of ours as a top level merge strategy, -X would be applying the ours option to the recursive merge strategy, which has not worked for me in the past trying to do this.
+
+Step by step, where oldbranch is the branch you want to overwrite with newbranch:
+
+  ```git checkout newbranch``` checks out the branch you want to keep
+  
+```git merge -s ours oldbranch``` merges in the old branch, but keeps all of our files.
+
+```git checkout oldbranch``` checks out the branch that you want to overwrite
+
+```git merge newbranch``` merges in the new branch, overwriting the old branch
+
   
