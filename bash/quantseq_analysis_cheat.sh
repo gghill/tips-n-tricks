@@ -3,6 +3,7 @@ screen -r -d sessioname # reopen attached sessions #
 screen -S sessioname # create session with custom name #
 Ctrl-a [ # go into scrollback mode to see more of a screen's history
 Ctrl-a-d # detach from screen
+C-a k,  C-a C-k  # (kill) Destroy current window.
 killall screen # DO NOT SUDO! # kill all screen sessions (that you have permission to modify)
 
 
