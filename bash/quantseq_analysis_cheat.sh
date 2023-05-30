@@ -49,7 +49,7 @@ awk '$2 > 0' FILE.txt > SOMEOUTPUTFILE.txt # Selecting lines where column 2 has 
 awk '{print $x,$y}' inputfile > outputfile # For x and y columns #
 
 ### Reading a few lines from a .gz file #
-zcat < someFQ.GZfile | head
+zcat file.fq.gz | head
 
 ### Read count in fq.gz file #
 zcat file.fq.gz | echo $((`wc -l`/4))
