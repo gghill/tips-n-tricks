@@ -16,9 +16,7 @@ sudo update-alternatives --config java # adding older version of Java to root pa
 ln -s /PATH/TO/ORIGINAL/FOLDER/*.fq.gz . # This creates a soft link of all the .fq.gz files in original directory, in current directory #
 
 ### Changing directory ownership #
-
 sudo chown -R ffi007:ffi007 . # Changing ownership of all current directories (-R) #
-
 
 ### Remember to change permissions for bash script execution #
 chmod 755 bashcript.sh
@@ -44,6 +42,9 @@ wc -l someGFFfile.gff
 
 ### Selecting lines from a txt file #
 awk '$2 > 0' FILE.txt > SOMEOUTPUTFILE.txt # Selecting lines where column 2 has a value > 0 #
+
+### Check if two files have identical contents #
+cmp --silent $file1 $file2 || echo "files are different"
 
 ### Print selected columns from a txt file #
 awk '{print $x,$y}' inputfile > outputfile # For x and y columns #
