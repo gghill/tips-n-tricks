@@ -1,6 +1,7 @@
 ### Screen management #
-screen -r -d sessioname # reopen attached sessions #
-screen -S sessioname # create session with custom name #
+screen -r -d <sessioname> # reopen attached sessions #
+screen -S <sessioname> # create session with custom name #
+screen -S 8890.old_name -X sessionname <new_name> # change the name of an existing session #
 Ctrl-a [ # go into scrollback mode to see more of a screen's history
 Ctrl-a-d # detach from screen
 C-a k,  C-a C-k  # (kill) Destroy current window.
@@ -23,6 +24,10 @@ chmod 755 bashcript.sh
 
 ### And for the filelist.txt #
 chmod 755 filelist.txt
+
+### To make a script globably available (after permissions are established) #
+export PATH=$PATH:"/usr/local/some_script_folder/"
+source ~/.bashrc
 
 ### File and directory management #
 
